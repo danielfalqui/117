@@ -25,7 +25,7 @@ $(document).ready(function(){
         $.ajax({
 
             //  tipo da requisição web
-            type : 'WEB',
+            type : 'POST',
 
             //  dados a serem enviados no formato JSON
             data : JSON.stringify(),
