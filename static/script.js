@@ -11,10 +11,10 @@ $(document).ready(function(){
 
 
     // Escreva um evento, quando o botão Enviar for clicado
-    $('').click(function(){
+    $('#button').click(function(){
 
         //  Obtenha o valor do texto da área de texto usando o método 'val()'
-        let text_value = $('').val()
+        let text_value = $('#text').val()
 
         //  Converta-o em um objeto JS.
         //  Forneça uma "chave" aqui e escreva o mesmo no arquivo app.py também para extrair dados
