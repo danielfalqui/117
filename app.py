@@ -12,11 +12,11 @@ def home():
     return render_template('index.html')
 
 # escreva uma rota para requisição post
-@app.route("sentiment_analysis", methods=["POST"])
+@app.route('/predict' , methods = ['POST'])
 def review():
 
     # extraia a avaliação do cliente escrevendo a "chave" apropriada dos dados JSON
-    review = request.json.get('')
+    review = request.json.get('customer_review')
 
     # verifique se a avaliação do cliente está vazia, então retorne o erro
     if not review:
@@ -30,9 +30,9 @@ def review():
 
     else:
 
-        _ , _ = sa.predict(review)
+       sentiment, emoji_url = sa.predict(review)
 
-        return jsonify({'':'' , '':''})
+        jsonify({'status':'Sucess', 'prediction': sentiment, 'url': emoji_url})
 
 
 if __name__  ==  "__main__":
