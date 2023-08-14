@@ -7,7 +7,7 @@ $(document).ready(function(){
 
     //  Busque a data atual e atualize-a no DOM
 
-
+    $("#display_date").html(display_date)
 
 
     // Escreva um evento, quando o botão Enviar for clicado
