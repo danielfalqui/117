@@ -40,10 +40,16 @@ $(document).ready(function(){
             success : function(result){
 
                 // extraia previsão e a URL do emoticon do resultado
+                predicted_emotion = result.data.predicted_emotion
+                emo_url = result.data.predicted_emotion_img_url
 
 
                 //  atualize os elementos DOM
+                $("#prediction").html(predicted_emotion)
+                $('#prediction').css("display", "block")
 
+                $("#emo_img_url").attr('src', emo_url)
+                $('#emo_img_url').css("display", "block")
 
                 //  exiba-os
 
